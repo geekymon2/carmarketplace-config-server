@@ -5,7 +5,7 @@ services:
     restart: always
     image: "geekymon2/cm-config-server"
     environment: 
-      ARTIFACT_NAME: "cm-config-server"
+      ARTIFACT_NAME: "config-server"
       SPRING_PROFILES_ACTIVE: "${SPRING_PROFILES_ACTIVE}"
       ENVIRONMENT: "${ENVIRONMENT}"
     #local setup

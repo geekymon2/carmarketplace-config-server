@@ -6,7 +6,7 @@ services:
     image: "geekymon2/cm-config-server"
     build: .
     environment: 
-      ARTIFACT_NAME: "cm-config-server"
+      ARTIFACT_NAME: "config-server"
       SPRING_PROFILES_ACTIVE: "${SPRING_PROFILES_ACTIVE}"
       ENVIRONMENT: "${ENVIRONMENT}"
     #local setup
