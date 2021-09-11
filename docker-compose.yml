@@ -1,6 +1,6 @@
 version: "3.9"
 services: 
-  cm-car-info-svc-web: 
+  cm-config-server: 
     restart: always
     image: "geekymon2/cm-config-server"
     environment: 
