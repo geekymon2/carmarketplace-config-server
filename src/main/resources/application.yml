@@ -1,9 +1,5 @@
-server:
-  port: 8888
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/geekymon2/carmarketplace-config.git
+server.port: 8888
+spring.cloud.config.server.git:
+          uri: file://${M2}/Development/GeekyMon2/carmarketplace-config
           default-label: main
+logging.level.org.springframework.web: DEBUG
