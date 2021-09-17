@@ -1,0 +1,2 @@
+encrypt:
+  key: ${CONFIG_SERVER_ENCRYPT_KEY}
