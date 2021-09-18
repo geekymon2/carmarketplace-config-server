@@ -31,7 +31,7 @@ printf "ENVIRONMENT=$ENV\nSPRING_PROFILES_ACTIVE=$ENV\nCONFIG_SERVER_ENCRYPT_KEY
 echo "- Loading Environment Variables"
 if [ -f .env ]
 then
-  export $(cat .env | sed 's/#.*//g' | xargs)
+  eval $(cat .env | sed -e /^$/d -e /^#/d -e 's/^/export /')
 fi
 echo "- Stopping containers"
 docker-compose -f "docker-compose.yml" stop
