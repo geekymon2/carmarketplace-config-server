@@ -86,7 +86,7 @@ jobs:
         file: service/docker.properties
         all: true
     - name: apply CI environment profile
-      run: printf "ENVIRONMENT=ci\nSPRING_PROFILES_ACTIVE=ci\nCONFIG_SERVER_ENCRYPT_KEY=%s" "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}",  >> service/.env
+      run: printf "ENVIRONMENT=ci\nSPRING_PROFILES_ACTIVE=ci\nCONFIG_SERVER_ENCRYPT_KEY=%s" "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}" >> service/.env
     - name: load env
       uses: c-py/action-dotenv-to-setenv@v2
       with:
@@ -116,7 +116,7 @@ jobs:
         file: service/docker.properties
         all: true
     - name: apply SIT environment profile
-      run: printf "ENVIRONMENT=sit\nSPRING_PROFILES_ACTIVE=sit\nCONFIG_SERVER_ENCRYPT_KEY=%s" "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}",  >> service/.env
+      run: printf "ENVIRONMENT=sit\nSPRING_PROFILES_ACTIVE=sit\nCONFIG_SERVER_ENCRYPT_KEY=%s" "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}" >> service/.env
     - name: load env
       uses: c-py/action-dotenv-to-setenv@v2
       with:
