@@ -26,7 +26,7 @@ fi
 
 echo "Starting Deployment for Image: $IMAGE_NAME."
 echo "- Creating Environment Variables"
-printf "ENVIRONMENT=$ENV\nSPRING_PROFILES_ACTIVE=$ENV\nCONFIG_SERVER_ENCRYPT_KEY=$KEY" >> .env
+printf "ENVIRONMENT=$ENV\nSPRING_PROFILES_ACTIVE=$ENV\nCONFIG_SERVER_ENCRYPT_KEY="\"$KEY\"" >> .env
 echo "- Loading Environment Variables"
 if [ -f .env ]
 then
