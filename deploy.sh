@@ -7,13 +7,13 @@ KEY=$2
 if [ -z "$ENV" ]
 then
     echo 'Environment cannot be blank!'
-    exit 0
+    exit 1
 fi
 
 if [ -z "$KEY" ]
 then 
     echo 'Key cannot be blank!'
-    exit 0
+    exit 1
 fi
 
 if [ -f "docker.properties" ]
@@ -21,6 +21,7 @@ then
     source docker.properties
 else
     echo 'docker.properties not found!'
+    exit 1
 fi
 
 
