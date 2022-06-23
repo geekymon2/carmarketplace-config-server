@@ -1,4 +1,4 @@
-name: build and deploy
+name: build
 
 on:
   push:
@@ -71,30 +71,4 @@ jobs:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKERHUB_REPOSITORY: geekymon2/${{ steps.docker.outputs.IMAGE_NAME }}   
-        README_FILEPATH: service/README.md   
-  
-  deployserviceci:
-    name: deploy CI
-    runs-on: [self-hosted, ci]
-    steps:
-    - name: checkout service
-      uses: actions/checkout@v2 
-      with:
-        path: service
-    - name: run deployment script
-      run: ./deploy.sh ci "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}"
-      working-directory: ./service
-    needs: buildservice
-
-  deployservicesit:
-    name: deploy SIT
-    runs-on: [self-hosted, sit]
-    steps:
-    - name: checkout service
-      uses: actions/checkout@v2 
-      with:
-        path: service
-    - name: run deployment script
-      run: ./deploy.sh sit "${{ secrets.CONFIG_SERVER_ENCRYPT_KEY }}"
-      working-directory: ./service
-    needs: buildservice
+        README_FILEPATH: service/README.md
