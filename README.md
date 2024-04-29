@@ -15,3 +15,7 @@ This service provides centralized spring cloud config server for carmarketplace 
 ## Documentation
 
 For more details refer to the swagger documentation.
+
+## Local Environment Setup
+
+In order for the config server to load configuration locally ensure that the carmarketplace repos are cloned in ${HOME}/Projects/GitHub folder.

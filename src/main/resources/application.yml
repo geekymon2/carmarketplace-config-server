@@ -1,6 +1,6 @@
 server.port: 8888
 spring.cloud.config.server.git:
-          uri: file://${M2}/Development/GeekyMon2/carmarketplace-config
+          uri: file://${HOME}/Projects/GitHub/carmarketplace-config
           cloneOnStart: true
           defaultLabel: main
           searchPaths: '{application}'
