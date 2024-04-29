@@ -18,4 +18,4 @@ For more details refer to the swagger documentation.
 
 ## Local Environment Setup
 
-In order for the config server to load configuration locally ensure that the carmarketplace repos are cloned in ${HOME}/Projects/GitHub folder.
+In order for the config server to load configuration locally ensure that the carmarketplace repos are cloned in ~/Projects/GitHub folder.
