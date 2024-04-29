@@ -1,0 +1,7 @@
+server.port: 8888
+spring.cloud.config.server.git:
+          uri: https://github.com/geekymon2/carmarketplace-config.git
+          cloneOnStart: true
+          defaultLabel: main
+          searchPaths: '{application}'
+logging.level.org.springframework.web: DEBUG
