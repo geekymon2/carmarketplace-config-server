@@ -4,3 +4,4 @@ spring.cloud.config.server.git:
           cloneOnStart: true
           defaultLabel: main
           searchPaths: '{application}'
+logging.level.org.springframework.web: DEBUG
