@@ -3,6 +3,7 @@
     <envs>
       <env name="CONFIG_SERVER_ENCRYPT_KEY" value="testing" />
       <env name="SPRING_PROFILES_ACTIVE" value="local" />
+      <env name="ENVIRONMENT" value="localhost" />	  
     </envs>
     <option name="MAIN_CLASS_NAME" value="com.geekymon2.carmarketplace.configserver.ConfigServerApplication" />
     <module name="config-server" />
